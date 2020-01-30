@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="top" id="d1H-CD-bV2"/>
                         <viewControllerLayoutGuide type="bottom" id="dq0-C9-Avc"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3o0-64-Fem">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3o0-64-Fem">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -259,7 +259,7 @@
                         <viewControllerLayoutGuide type="top" id="yag-7O-MMM"/>
                         <viewControllerLayoutGuide type="bottom" id="tVK-Co-xKK"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -575,14 +575,17 @@
         <!--Navigation Controller-->
         <scene sceneID="xKm-RA-014">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JPp-Tc-UKB" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="JPp-Tc-UKB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="9Ym-Lb-iXm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vsB-dw-WLS">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="321" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HaM-MS-gcy">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="J3i-Ut-eAc"/>
                     </connections>
@@ -762,6 +765,9 @@
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="JPp-Tc-UKB" kind="show" id="8p5-bv-Dcf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwt-gx-pg2">
                                 <rect key="frame" x="1" y="479" width="321" height="2"/>
