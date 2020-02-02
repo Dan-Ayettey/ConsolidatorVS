@@ -13,12 +13,32 @@ import SwiftUI
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var leftNavButtonAccountMainContent: UINavigationItem!
+    @IBOutlet weak var accountMainViewMenuButton: UIButton!
+    @IBOutlet var loginPageViewer: UIView!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var userIdTextField: UITextField!
+    @IBOutlet weak var passwordFieldTitle : UILabel!
+    @IBOutlet weak var passwordButtonTitle: UIButton!
+    @IBOutlet weak var spieButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
 
-  
+
+    @IBOutlet weak var contanerMainMenuPopup: UISegmentedControl!
+
+    
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-      
 
+         
+   
+        
+        componentVisibility(component: contanerMainMenuPopup, isVisible: true)
+        
+        //contanerMainMenu?.isHidden = true
         
         
         
@@ -28,55 +48,112 @@ class ViewController: UIViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      
-        
-        self.ContanerViewMenuPopup?.isHidden = true
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        if(animated == true){
-            
-           
-        }
-    }
-
-    @IBAction func TopTabMenuButton(_ sender: UIButton, forEvent event: UIEvent) {
-        
-     let transition = CATransition()
-        transition.duration = 0.3
-        transition.type = CATransitionType(rawValue: "push")
-        
+  
+    
    
     
-                
-        if(self.ContanerViewMenuPopup.isHidden){
-            
-            transition.subtype = CATransitionSubtype.fromRight
-            self.ContanerViewMenuPopup.layer.add(transition, forKey: kCATransition)
-            self.ContanerViewMenuPopup?.isHidden = false
-        }else{
-            
-            transition.subtype = CATransitionSubtype.fromLeft
-            self.ContanerViewMenuPopup.layer.add(transition, forKey: kCATransition)
-            self.ContanerViewMenuPopup?.isHidden = true
-        }
-
+ 
+    @IBAction func keyPress(_ sender: UITextField, forEvent event: UIEvent){
         
-      
-        print("Menu")
+         passwordField.isSecureTextEntry = true;
+        
+    }
+
+    @IBAction func AccountMainContainerView(_ sender: UIButton, forEvent event: UIEvent) {
+        
+        
+       slider(duration: 0.4, type: "push", segment: contanerMainMenuPopup, isVisibleLeft: true, isVisibleRight: true)
+
+         
+        
+        print("Host")
+       /* //vc.self.ContanerViewMenuPopup?.isHidden = false;
+       
+        self.close?.isHidden =  ((self.close?.isHidden = true) != nil);
+           self.close?.isHidden = true
+        self.Uclose?.isHidden = true;
+        if((vc.isViewLoaded)){
+            print(" sfkljsm,dlf ")
+            //mainContainerViewHide(off: true)
+        }*/
+       
+          //
+        
+        
+   //self.accountMainViewMenuButton?.sendActions(for: .touchUpInside)
+        //mainContainerViewHide(off: true)
         
     }
     
-    @IBOutlet weak var ContanerViewMenuPopup: UISegmentedControl!
-
-    @IBOutlet weak var containerUIViewer: UIView!
     
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var userIdTextField: UITextField!
-    @IBOutlet weak var passwordFieldTitle : UILabel!
-    @IBOutlet weak var passwordButtonTitle: UIButton!
-    @IBOutlet weak var spieButton: UIButton!
-    @IBOutlet weak var loginButton: UIButton!
+    func componentVisibility(component: UISegmentedControl!, isVisible: Bool){
+        
+
+        component?.isHidden = isVisible
+          
+        
+    }
+    
+  
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         
+     
+        
+        contanerMainMenuPopup?.isHidden = true;
+ 
+
+      
+       
+         
+    
+       
+    }
+
+    func slider(duration: CDouble, type: String, segment: UISegmentedControl, isVisibleLeft: Bool, isVisibleRight: Bool){
+        
+      
+        
+        let transition = CATransition()
+               transition.duration = duration
+               transition.type = CATransitionType(rawValue: type)
+               
+          
+           
+                       
+               if(segment.isHidden){
+                   
+                    
+                   
+                   transition.subtype = CATransitionSubtype.fromRight
+                   segment.layer.add(transition, forKey: kCATransition)
+                
+                segment.isHidden = isVisibleLeft
+               }else{
+                   
+                   transition.subtype = CATransitionSubtype.fromLeft
+                   segment.layer.add(transition, forKey: kCATransition)
+               
+                    segment.isHidden = isVisibleRight
+               }
+       
+    }
+    
+    @IBAction func accountMainViewMenuButtonEvent(_ sender: UIButton, forEvent event: UIEvent) {
+      
+        
+        slider(duration: 0.4, type: "push", segment: contanerMainMenuPopup, isVisibleLeft: false, isVisibleRight: true)
+
+        
+      
+   
+        
+    }
+    
+   
+
+
+    
     
     @IBAction func spieButtonTouchInside(_ sender: UIButton, forEvent event: UIEvent) {
         
@@ -84,7 +161,7 @@ class ViewController: UIViewController {
     }
    
     
-   
+ 
     
     @IBAction func passwordInputTouchInside(_ sender: UITextField) {
         

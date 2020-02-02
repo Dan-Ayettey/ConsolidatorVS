@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF821AF823E58A650060A5E4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF821AF723E58A650060A5E4 /* Button.swift */; };
+		AFB2005723E3640700AD3FE3 /*  MainLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB2005623E3640700AD3FE3 /*  MainLaunchScreen.storyboard */; };
 		AFC696D823DBED6F00152CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC696D723DBED6F00152CAB /* AppDelegate.swift */; };
 		AFC696DA23DBED6F00152CAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC696D923DBED6F00152CAB /* SceneDelegate.swift */; };
 		AFC696DF23DBED6F00152CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC696DD23DBED6F00152CAB /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF821AF723E58A650060A5E4 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		AFB2005623E3640700AD3FE3 /*  MainLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = " MainLaunchScreen.storyboard"; sourceTree = "<group>"; };
 		AFC696D423DBED6F00152CAB /* CosolidatorVs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CosolidatorVs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC696D723DBED6F00152CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFC696D923DBED6F00152CAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				AFC696F023DD430700152CAB /* TextFieldInput.swift */,
 				AFC696F523E0915C00152CAB /* ViewController.swift */,
 				AFE1CD6D23E201E300C9780C /* ContainerV.swift */,
+				AFB2005623E3640700AD3FE3 /*  MainLaunchScreen.storyboard */,
+				AF821AF723E58A650060A5E4 /* Button.swift */,
 			);
 			path = CosolidatorVs;
 			sourceTree = "<group>";
@@ -139,6 +145,7 @@
 				AFC696E423DBED7000152CAB /* LaunchScreen.storyboard in Resources */,
 				AFC696E123DBED7000152CAB /* Assets.xcassets in Resources */,
 				AFC696DF23DBED6F00152CAB /* Main.storyboard in Resources */,
+				AFB2005723E3640700AD3FE3 /*  MainLaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF821AF823E58A650060A5E4 /* Button.swift in Sources */,
 				AFC696F623E0915C00152CAB /* ViewController.swift in Sources */,
 				AFC696D823DBED6F00152CAB /* AppDelegate.swift in Sources */,
 				AFE1CD6E23E201E300C9780C /* ContainerV.swift in Sources */,
