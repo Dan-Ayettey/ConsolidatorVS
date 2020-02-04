@@ -2,10 +2,18 @@
 //  ViewController.swift
 //  CosolidatorVs
 //
-//  Created by STIelev on 2020-01-25.
+//  Created by STIelev on 2020-02-04.
 //  Copyright © 2020 STIelev. All rights reserved.
 //
 
+import Foundation
+//
+//  ViewController.swift
+//  CosolidatorVs
+//
+//  Created by STIelev on 2020-01-25.
+//  Copyright © 2020 STIelev. All rights reserved.
+//
 import UIKit
 import QuartzCore
 import SwiftUI
@@ -270,20 +278,3 @@ class ViewController: UIViewController {
 
     }
    
-
-    
-
-   
-
-
-
-
-
-
-
-          // Do any additional setup after loading the view.
-      
-    
-
-
-

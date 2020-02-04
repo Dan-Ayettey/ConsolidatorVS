@@ -71,14 +71,14 @@ import UIKit
    
 
 
- 
+
     @IBInspectable var cornerRadius: CGFloat{
            set{
                layer.cornerRadius = newValue
            }
            
            get{
-               
+            
                return  layer.cornerRadius;
            }
        }
@@ -96,6 +96,7 @@ import UIKit
            set {
                    guard let uiColor = newValue else { return }
                    layer.borderColor = uiColor.cgColor
+            
                }
                get {
                    guard let color = layer.borderColor else { return nil }
