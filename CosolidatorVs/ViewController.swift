@@ -45,7 +45,8 @@ class ViewController: UIViewController {
    
         
         componentVisibility(component: contanerMainMenuPopup, isVisible: true)
-        
+    
+
         //contanerMainMenu?.isHidden = true
         
         
@@ -59,10 +60,10 @@ class ViewController: UIViewController {
   
     
    
-    
+  
  
     @IBAction func keyPress(_ sender: UITextField, forEvent event: UIEvent){
-        
+       
          passwordField.isSecureTextEntry = true;
         
     }

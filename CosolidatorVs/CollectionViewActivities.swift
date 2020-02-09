@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 class CollectionViewActivities: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return item.count
     }
