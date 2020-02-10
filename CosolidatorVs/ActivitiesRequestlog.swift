@@ -14,8 +14,8 @@ class ActivitiesRequestlog: UICollectionView, UICollectionViewDataSource, UIColl
 
 
     weak var update: UIButton!;
-    let head = ["Project","Date","Hours","Update","Delete"]
-    var data = ["Amazon", "2020/04/30","20","update","Del"]
+    let head = ["Project","Date","View","Update","Delete"]
+    var data = ["Amazon", "2020/4/30","       (◉)","        ✎","        ☒","Amazon","2020/4/30","       (◉)","        ✎","        ☒"]
     
    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -39,7 +39,7 @@ class ActivitiesRequestlog: UICollectionView, UICollectionViewDataSource, UIColl
         
         
      
-        return  100
+        return  data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -62,17 +62,23 @@ class ActivitiesRequestlog: UICollectionView, UICollectionViewDataSource, UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "activitiesCell", for: indexPath) as! ActivitiesRequestViewCell
       
          
-        for count in 0...100{
-             cell.event.text = "\(count)"
-        }
+      
+        cell.event.text = data[indexPath.item]
+        
        
-        cell.backgroundColor = UIColor.lightText
+           
+         
+           cell.backgroundColor = UIColor.lightText
+            return cell
+       
+       
+  
      
        //cell.backgroundColor = UIColor.lightGray
         
     
         
-        return cell  ;
+        
     }
     
     
@@ -98,7 +104,10 @@ class ActivitiesRequestlog: UICollectionView, UICollectionViewDataSource, UIColl
         }
         
     
-     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
+        print(indexPath.item)
+    }
     
 }
 

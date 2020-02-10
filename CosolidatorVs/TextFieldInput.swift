@@ -44,6 +44,39 @@ import UIKit
         }
     }
     
+    @IBInspectable var shadowOffSet: CGSize{
+           set{
+               layer.shadowOffset = newValue;
+           }
+           
+           get{
+               return layer.shadowOffset
+           }
+           
+       }
+       
+       @IBInspectable var shadowColor: UIColor?{
+           set{
+               guard let shadowColor = newValue else{return}
+               layer.shadowColor = shadowColor.cgColor;
+           }
+           
+           get{
+               guard let coloroSet = layer.shadowColor else {return nil}
+               return UIColor(cgColor: coloroSet)
+           }
+           
+       }
+       @IBInspectable var shadowOpacity: Float{
+           set{
+               layer.shadowOpacity = newValue;
+           }
+           
+           get{
+            return layer.shadowOpacity;
+           }
+           
+       }
 }
 
 

@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AF05336523E8F2E300F92BE3 /* CollectionViewActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF05336423E8F2E300F92BE3 /* CollectionViewActivities.swift */; };
-		AF1DD8F523EF5F8A008D4A52 /* ActivitiesLogHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DD8F423EF5F8A008D4A52 /* ActivitiesLogHeader.swift */; };
+		AF1DD8F523EF5F8A008D4A52 /* FileIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DD8F423EF5F8A008D4A52 /* FileIO.swift */; };
+		AF38080D23F08CED00ABDC15 /* FileManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38080C23F08CED00ABDC15 /* FileManagement.swift */; };
 		AF3BD47623EC3EBE0039042F /* ActivitiesRequestlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3BD47523EC3EBE0039042F /* ActivitiesRequestlog.swift */; };
 		AF3BD47823EC4F680039042F /* ActivitiesRequestViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3BD47723EC4F680039042F /* ActivitiesRequestViewCell.swift */; };
 		AF821AFA23E782B30060A5E4 /* CollectionViewCellActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF821AF923E782B30060A5E4 /* CollectionViewCellActivities.swift */; };
@@ -19,13 +20,14 @@
 		AFC696DF23DBED6F00152CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC696DD23DBED6F00152CAB /* Main.storyboard */; };
 		AFC696E123DBED7000152CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC696E023DBED7000152CAB /* Assets.xcassets */; };
 		AFC696E423DBED7000152CAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC696E223DBED7000152CAB /* LaunchScreen.storyboard */; };
-		AFC696EF23DD301D00152CAB /* loginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC696EE23DD301D00152CAB /* loginButton.swift */; };
+		AFC696EF23DD301D00152CAB /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC696EE23DD301D00152CAB /* LoginButton.swift */; };
 		AFC696F123DD430700152CAB /* TextFieldInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC696F023DD430700152CAB /* TextFieldInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF05336423E8F2E300F92BE3 /* CollectionViewActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewActivities.swift; sourceTree = "<group>"; };
-		AF1DD8F423EF5F8A008D4A52 /* ActivitiesLogHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesLogHeader.swift; sourceTree = "<group>"; };
+		AF1DD8F423EF5F8A008D4A52 /* FileIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileIO.swift; sourceTree = "<group>"; };
+		AF38080C23F08CED00ABDC15 /* FileManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagement.swift; sourceTree = "<group>"; };
 		AF3BD47523EC3EBE0039042F /* ActivitiesRequestlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesRequestlog.swift; sourceTree = "<group>"; };
 		AF3BD47723EC4F680039042F /* ActivitiesRequestViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesRequestViewCell.swift; sourceTree = "<group>"; };
 		AF821AF923E782B30060A5E4 /* CollectionViewCellActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellActivities.swift; sourceTree = "<group>"; };
@@ -39,7 +41,7 @@
 		AFC696E323DBED7000152CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFC696E523DBED7000152CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFC696EB23DBED8A00152CAB /* CosolidatorVs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CosolidatorVs.entitlements; sourceTree = "<group>"; };
-		AFC696EE23DD301D00152CAB /* loginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginButton.swift; sourceTree = "<group>"; };
+		AFC696EE23DD301D00152CAB /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		AFC696F023DD430700152CAB /* TextFieldInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +82,7 @@
 				AFC696E023DBED7000152CAB /* Assets.xcassets */,
 				AFC696E223DBED7000152CAB /* LaunchScreen.storyboard */,
 				AFC696E523DBED7000152CAB /* Info.plist */,
-				AFC696EE23DD301D00152CAB /* loginButton.swift */,
+				AFC696EE23DD301D00152CAB /* LoginButton.swift */,
 				AFC696F023DD430700152CAB /* TextFieldInput.swift */,
 				AFB2005623E3640700AD3FE3 /*  MainLaunchScreen.storyboard */,
 				AF821AF923E782B30060A5E4 /* CollectionViewCellActivities.swift */,
@@ -88,7 +90,8 @@
 				AF90ADFC23E900B000AE6710 /* ViewController.swift */,
 				AF3BD47523EC3EBE0039042F /* ActivitiesRequestlog.swift */,
 				AF3BD47723EC4F680039042F /* ActivitiesRequestViewCell.swift */,
-				AF1DD8F423EF5F8A008D4A52 /* ActivitiesLogHeader.swift */,
+				AF1DD8F423EF5F8A008D4A52 /* FileIO.swift */,
+				AF38080C23F08CED00ABDC15 /* FileManagement.swift */,
 			);
 			path = CosolidatorVs;
 			sourceTree = "<group>";
@@ -169,10 +172,11 @@
 				AFC696D823DBED6F00152CAB /* AppDelegate.swift in Sources */,
 				AF05336523E8F2E300F92BE3 /* CollectionViewActivities.swift in Sources */,
 				AFC696F123DD430700152CAB /* TextFieldInput.swift in Sources */,
+				AF38080D23F08CED00ABDC15 /* FileManagement.swift in Sources */,
 				AF821AFA23E782B30060A5E4 /* CollectionViewCellActivities.swift in Sources */,
-				AF1DD8F523EF5F8A008D4A52 /* ActivitiesLogHeader.swift in Sources */,
+				AF1DD8F523EF5F8A008D4A52 /* FileIO.swift in Sources */,
 				AF90ADFD23E900B000AE6710 /* ViewController.swift in Sources */,
-				AFC696EF23DD301D00152CAB /* loginButton.swift in Sources */,
+				AFC696EF23DD301D00152CAB /* LoginButton.swift in Sources */,
 				AFC696DA23DBED6F00152CAB /* SceneDelegate.swift in Sources */,
 				AF3BD47823EC4F680039042F /* ActivitiesRequestViewCell.swift in Sources */,
 			);
