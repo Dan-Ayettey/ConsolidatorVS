@@ -45,6 +45,7 @@ class ViewController: UIViewController {
    
         
         componentVisibility(component: contanerMainMenuPopup, isVisible: true)
+            view.endEditing(true)
     
 
         //contanerMainMenu?.isHidden = true

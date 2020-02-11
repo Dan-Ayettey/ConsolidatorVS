@@ -22,6 +22,7 @@
 		AFC696E423DBED7000152CAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC696E223DBED7000152CAB /* LaunchScreen.storyboard */; };
 		AFC696EF23DD301D00152CAB /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC696EE23DD301D00152CAB /* LoginButton.swift */; };
 		AFC696F123DD430700152CAB /* TextFieldInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC696F023DD430700152CAB /* TextFieldInput.swift */; };
+		AFD0105923F2A61A00F16B0A /* PickDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD0105823F2A61A00F16B0A /* PickDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		AFC696EB23DBED8A00152CAB /* CosolidatorVs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CosolidatorVs.entitlements; sourceTree = "<group>"; };
 		AFC696EE23DD301D00152CAB /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		AFC696F023DD430700152CAB /* TextFieldInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInput.swift; sourceTree = "<group>"; };
+		AFD0105823F2A61A00F16B0A /* PickDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				AF3BD47723EC4F680039042F /* ActivitiesRequestViewCell.swift */,
 				AF1DD8F423EF5F8A008D4A52 /* FileIO.swift */,
 				AF38080C23F08CED00ABDC15 /* FileManagement.swift */,
+				AFD0105823F2A61A00F16B0A /* PickDate.swift */,
 			);
 			path = CosolidatorVs;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				AFC696F123DD430700152CAB /* TextFieldInput.swift in Sources */,
 				AF38080D23F08CED00ABDC15 /* FileManagement.swift in Sources */,
 				AF821AFA23E782B30060A5E4 /* CollectionViewCellActivities.swift in Sources */,
+				AFD0105923F2A61A00F16B0A /* PickDate.swift in Sources */,
 				AF1DD8F523EF5F8A008D4A52 /* FileIO.swift in Sources */,
 				AF90ADFD23E900B000AE6710 /* ViewController.swift in Sources */,
 				AFC696EF23DD301D00152CAB /* LoginButton.swift in Sources */,
