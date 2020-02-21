@@ -18,7 +18,6 @@ import UIKit
 import QuartzCore
 import SwiftUI
 
-
 class ViewController: UIViewController {
 
     
@@ -74,24 +73,7 @@ class ViewController: UIViewController {
         
        slider(duration: 0.4, type: "push", segment: contanerMainMenuPopup, isVisibleLeft: true, isVisibleRight: true)
 
-         
-        
-        print("Host")
-       /* //vc.self.ContanerViewMenuPopup?.isHidden = false;
-       
-        self.close?.isHidden =  ((self.close?.isHidden = true) != nil);
-           self.close?.isHidden = true
-        self.Uclose?.isHidden = true;
-        if((vc.isViewLoaded)){
-            print(" sfkljsm,dlf ")
-            //mainContainerViewHide(off: true)
-        }*/
-       
-          //
-        
-        
-   //self.accountMainViewMenuButton?.sendActions(for: .touchUpInside)
-        //mainContainerViewHide(off: true)
+  
         
     }
     

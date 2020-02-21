@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16085" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JPp-Tc-UKB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JPp-Tc-UKB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16078.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -601,7 +601,7 @@
                                 <rect key="frame" x="-1" y="88" width="415" height="766"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="rNl-u1-shb">
+                                    <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="rNl-u1-shb">
                                         <rect key="frame" x="0.0" y="204" width="415" height="274"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -689,7 +689,7 @@
                                                         <real key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="11"/>
@@ -1053,7 +1053,7 @@
         <!--View Controller Schedule-->
         <scene sceneID="tRT-cu-29K">
             <objects>
-                <viewController id="Jty-mD-YOo" userLabel="View Controller Schedule" sceneMemberID="viewController">
+                <viewController id="Jty-mD-YOo" userLabel="View Controller Schedule" customClass="PickADate" customModule="CosolidatorVs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OfO-f6-uPR"/>
                         <viewControllerLayoutGuide type="bottom" id="Sv8-Bh-Ggs"/>
@@ -1109,7 +1109,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="dIh-EQ-qQb">
+                                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="dIh-EQ-qQb">
                                                 <rect key="frame" x="0.0" y="29" width="415" height="223"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <userDefinedRuntimeAttributes>
@@ -1120,6 +1120,9 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="schedulerDatePickerValueChanged:" destination="Jty-mD-YOo" eventType="valueChanged" id="U0S-zf-Rl6"/>
+                                                </connections>
                                             </datePicker>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u4k-UQ-W9C">
                                                 <rect key="frame" x="-2" y="327" width="416" height="38"/>
@@ -1170,8 +1173,8 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    Sunday  2 05  2020 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NF4-q2-Jt8">
-                                        <rect key="frame" x="0.0" y="62" width="414" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NF4-q2-Jt8" userLabel="Sunday  2 05  2020 pm">
+                                        <rect key="frame" x="13" y="68" width="229" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                         <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1355,10 +1358,14 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="dIh-EQ-qQb" id="6um-Lc-WQo"/>
+                        <outlet property="scheduleDateLabel" destination="NF4-q2-Jt8" id="LfN-Um-pOx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxd-N9-Tr7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4980" y="131"/>
+            <point key="canvasLocation" x="4979.7101449275369" y="130.58035714285714"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="R3k-ik-QKl">
@@ -1828,7 +1835,7 @@
         <!--View Controller Schedule-->
         <scene sceneID="94N-3h-HPI">
             <objects>
-                <viewController id="YjG-MR-sMy" userLabel="View Controller Schedule" customClass="FileManagement" customModule="CosolidatorVs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YjG-MR-sMy" userLabel="View Controller Schedule" customClass="ViewController" customModule="CosolidatorVs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qNX-BR-PSX"/>
                         <viewControllerLayoutGuide type="bottom" id="5bk-xc-EHW"/>
@@ -1837,7 +1844,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kMZ-Yb-CLf" customClass="ActivitiesRequestlog" customModule="CosolidatorVs" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kMZ-Yb-CLf">
                                 <rect key="frame" x="0.0" y="162" width="414" height="685"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -1974,7 +1981,6 @@
                                                             <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="saveAs:forEvent:" destination="YjG-MR-sMy" eventType="touchUpInside" id="Fqe-5m-OHn"/>
                                                             <segue destination="xEq-r5-sTV" kind="popoverPresentation" popoverAnchorView="gOV-Vk-ABp" id="u4R-IG-HWC">
                                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                                             </segue>
@@ -2009,14 +2015,14 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="activitiesCell" id="u1M-NI-C5t" customClass="ActivitiesRequestViewCell" customModule="CosolidatorVs" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="activitiesCell" id="u1M-NI-C5t">
                                                 <rect key="frame" x="0.0" y="50" width="414" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zxG-Se-ogJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sil-G4-uU6">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="cell" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sil-G4-uU6">
                                                             <rect key="frame" x="0.0" y="0.0" width="113" height="30"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -2033,12 +2039,9 @@
                                                         <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outlet property="event" destination="sil-G4-uU6" id="auK-8Y-IQL"/>
-                                                </connections>
                                             </collectionViewCell>
                                         </cells>
-                                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="activitiesCellHead" id="Ymc-4f-bt1" customClass="ActivitiesRequestViewCell" customModule="CosolidatorVs" customModuleProvider="target">
+                                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="activitiesCellHead" id="Ymc-4f-bt1">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -2142,13 +2145,6 @@
                                                     <color key="value" red="0.83529418710000003" green="0.83529424669999996" blue="0.83529418710000003" alpha="0.88527397260273977" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <outlet property="head" destination="skn-sa-xOM" id="TV0-M6-ei4"/>
-                                                <outlet property="head1" destination="myA-eh-Yh6" id="ZaQ-Xp-twW"/>
-                                                <outlet property="head2" destination="JmQ-yt-PnG" id="a8c-x6-Tmv"/>
-                                                <outlet property="head3" destination="7iz-Al-evY" id="06q-Co-o3a"/>
-                                                <outlet property="head4" destination="KPx-pB-H2e" id="VDu-dU-4Ai"/>
-                                            </connections>
                                         </collectionReusableView>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidths">
@@ -2158,10 +2154,6 @@
                                                 <color key="value" red="0.83529418710000003" green="0.83529424669999996" blue="0.83529418710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <outlet property="dataSource" destination="kMZ-Yb-CLf" id="Qix-rO-UVW"/>
-                                            <outlet property="delegate" destination="kMZ-Yb-CLf" id="76U-0n-h2D"/>
-                                        </connections>
                                     </collectionView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2215,24 +2207,24 @@
         <!--View Controller-->
         <scene sceneID="WyS-5L-u0G">
             <objects>
-                <viewController id="xEq-r5-sTV" sceneMemberID="viewController">
+                <viewController id="xEq-r5-sTV" customClass="ViewController" customModule="CosolidatorVs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4el-64-1am"/>
                         <viewControllerLayoutGuide type="bottom" id="2Nn-Ua-eP7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="b5b-2u-xYi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nb9-2E-11F">
-                                <rect key="frame" x="0.0" y="798" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Item" id="jle-yH-wrp"/>
                                 </items>
                             </toolbar>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bHe-GQ-hmC">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items/>
@@ -2335,7 +2327,7 @@
         <!--View Controller Schedule-->
         <scene sceneID="gRB-A4-tha">
             <objects>
-                <viewController id="a2H-bR-zDZ" userLabel="View Controller Schedule" customClass="PickDate" customModule="CosolidatorVs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="a2H-bR-zDZ" userLabel="View Controller Schedule" customClass="PickADate" customModule="CosolidatorVs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TYR-vy-fWX"/>
                         <viewControllerLayoutGuide type="bottom" id="BVJ-8O-9JZ"/>
@@ -2355,7 +2347,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="text.bubble" catalog="system"/>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0RM-zS-dGI" customClass="CollectionViewActivities" customModule="CosolidatorVs" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0RM-zS-dGI">
                                 <rect key="frame" x="0.0" y="233" width="414" height="614"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -2621,22 +2613,23 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J1Y-n0-U7A">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J1Y-n0-U7A" customClass="CollectionsDataSourceActivities" customModule="CosolidatorVs" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="137" width="414" height="258"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="e1o-yA-Siq">
+                                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="e1o-yA-Siq">
                                                 <rect key="frame" x="0.0" y="24" width="414" height="187"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <connections>
-                                                    <action selector="startDatePickerValueChanged:" destination="a2H-bR-zDZ" eventType="valueChanged" id="UZa-YN-vkw"/>
+                                                    <action selector="datePickerValueChanged:" destination="a2H-bR-zDZ" eventType="editingChanged" id="Jcr-ff-LMl"/>
+                                                    <action selector="datePickerValueChanged:" destination="a2H-bR-zDZ" eventType="valueChanged" id="XOI-MM-0SU"/>
                                                 </connections>
                                             </datePicker>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qpn-N1-Ys4">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qpn-N1-Ys4" customClass="CollectionsDataSourceActivities" customModule="CosolidatorVs" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196084980000002" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="uR9-59-4Lz">
                                                     <size key="itemSize" width="73" height="25"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -2644,7 +2637,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="LdU-na-Fki" customClass="CollectionViewCellActivities" customModule="CosolidatorVs" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dateoftheweek" id="LdU-na-Fki" customClass="CollectionCellElements" customModule="CosolidatorVs" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="73" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Bw9-pe-TQz">
@@ -2664,7 +2657,7 @@
                                                         <color key="backgroundColor" red="0.87055307630000001" green="0.86666887999999997" blue="0.86666661499999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <size key="customSize" width="73" height="25"/>
                                                         <connections>
-                                                            <outlet property="dayOftheWeek" destination="MsN-rx-7Qj" id="9WY-jt-K3T"/>
+                                                            <outlet property="dateoftheweek" destination="MsN-rx-7Qj" id="hbG-pa-5JN"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -2677,8 +2670,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <outlet property="dataSource" destination="0RM-zS-dGI" id="Sgt-6W-aiQ"/>
-                                                    <outlet property="delegate" destination="0RM-zS-dGI" id="kcM-4o-WV9"/>
+                                                    <outlet property="dataSource" destination="J1Y-n0-U7A" id="X3h-eT-MSd"/>
+                                                    <outlet property="delegate" destination="J1Y-n0-U7A" id="xG6-1C-94J"/>
                                                 </connections>
                                             </collectionView>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HxY-NV-gQf">
@@ -2686,11 +2679,17 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM/DD/YYS" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VKY-5w-9IE">
-                                                        <rect key="frame" x="20" y="18" width="97" height="34"/>
+                                                        <rect key="frame" x="20" y="18" width="106" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="textColor" red="0.0072386297400000004" green="0.54361760619999999" blue="0.27446132899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="editingBegins:" destination="a2H-bR-zDZ" eventType="editingChanged" id="281-CO-y0g"/>
+                                                            <action selector="startDateStateChange:forEach:" destination="a2H-bR-zDZ" eventType="valueChanged" id="1Aj-Wl-aCP"/>
+                                                            <action selector="startDateStateChange:forEach:" destination="a2H-bR-zDZ" eventType="touchDown" id="GhB-Ku-wVV"/>
+                                                            <action selector="startDateStateChange:forEach:" destination="a2H-bR-zDZ" eventType="touchUpInside" id="kHN-Kg-w2s"/>
+                                                        </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gql-Nq-1Gg">
                                                         <rect key="frame" x="20" y="4" width="58" height="15"/>
@@ -2700,46 +2699,62 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End-Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJo-gz-Sgk">
-                                                        <rect key="frame" x="125" y="4" width="54" height="15"/>
+                                                        <rect key="frame" x="131" y="4" width="54" height="15"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM/DD/YYE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JHH-Ck-qqT">
-                                                        <rect key="frame" x="125" y="18" width="97" height="34"/>
+                                                        <rect key="frame" x="131" y="18" width="104" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="textColor" red="0.0072386297400000004" green="0.54361760619999999" blue="0.27446132899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="editingBegins:" destination="a2H-bR-zDZ" eventType="editingChanged" id="D9T-FZ-vvI"/>
+                                                            <action selector="endDateStateChange:forEach:" destination="a2H-bR-zDZ" eventType="touchDown" id="D4k-6X-fDi"/>
+                                                            <action selector="endDateStateChange:forEach:" destination="a2H-bR-zDZ" eventType="valueChanged" id="WeT-WF-n83"/>
+                                                            <action selector="endDateStateChange:forEach:" destination="a2H-bR-zDZ" eventType="touchUpInside" id="lw7-Dk-8Ia"/>
+                                                        </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hP-Ij-I5x">
-                                                        <rect key="frame" x="230" y="4" width="59" height="15"/>
+                                                        <rect key="frame" x="243" y="4" width="59" height="15"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00:00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xke-l9-7Zu">
-                                                        <rect key="frame" x="230" y="18" width="97" height="34"/>
+                                                        <rect key="frame" x="243" y="18" width="97" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="textColor" red="0.0072386297400000004" green="0.54361760619999999" blue="0.27446132899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="totalTimeResult:forEvent:" destination="a2H-bR-zDZ" eventType="touchDown" id="08a-p0-a5f"/>
+                                                            <action selector="totalTimeResult:forEvent:" destination="a2H-bR-zDZ" eventType="valueChanged" id="IVx-Gg-IUR"/>
+                                                            <action selector="totalTimeResult:forEvent:" destination="a2H-bR-zDZ" eventType="editingChanged" id="W7u-nu-xmG"/>
+                                                            <action selector="totalTimeResult:forEvent:" destination="a2H-bR-zDZ" eventType="editingDidBegin" id="cwa-mT-Zar"/>
+                                                        </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GMT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SK6-Vm-7XA">
-                                                        <rect key="frame" x="335" y="2" width="28" height="15"/>
+                                                        <rect key="frame" x="348" y="2" width="28" height="15"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GMT" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G3t-Rd-GxL">
-                                                        <rect key="frame" x="331" y="18" width="52" height="34"/>
+                                                        <rect key="frame" x="344" y="18" width="52" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="textColor" red="0.0072386297400000004" green="0.54361760619999999" blue="0.27446132899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="timeGMTWithSender:" destination="a2H-bR-zDZ" eventType="editingChanged" id="1rw-aT-d1m"/>
+                                                            <action selector="timeGMTWithSender:" destination="a2H-bR-zDZ" eventType="editingDidEnd" id="4ql-5X-jaF"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -2820,6 +2835,13 @@
                                 <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VP5-Z8-lOT" userLabel="errorMessage">
+                                <rect key="frame" x="20" y="97" width="238" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.98039203880000003" green="0.97641903159999999" blue="0.98039263489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2835,9 +2857,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="datePicker" destination="e1o-yA-Siq" id="YoT-JA-vAa"/>
-                        <outlet property="endDate" destination="JHH-Ck-qqT" id="Zic-Lh-UYr"/>
-                        <outlet property="startDate" destination="VKY-5w-9IE" id="34S-8v-zle"/>
+                        <outlet property="GMT" destination="G3t-Rd-GxL" id="9eG-nL-fqy"/>
+                        <outlet property="datePicker" destination="e1o-yA-Siq" id="Va8-dG-efv"/>
+                        <outlet property="end" destination="JHH-Ck-qqT" id="nWf-Ya-dK7"/>
+                        <outlet property="errorMessage" destination="VP5-Z8-lOT" id="uE3-wY-7kH"/>
+                        <outlet property="start" destination="VKY-5w-9IE" id="H56-Sm-lwU"/>
+                        <outlet property="totalTime" destination="xke-l9-7Zu" id="qaQ-mS-zDX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnY-75-HQQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2845,43 +2870,43 @@
             <point key="canvasLocation" x="5757.971014492754" y="130.58035714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="archivebox" catalog="system" width="64" height="52"/>
+        <image name="arrow.down" catalog="system" width="60" height="64"/>
+        <image name="arrow.down.circle" catalog="system" width="64" height="60"/>
+        <image name="arrow.up.circle" catalog="system" width="64" height="60"/>
+        <image name="backward" catalog="system" width="64" height="38"/>
+        <image name="bag.badge.plus" catalog="system" width="64" height="60"/>
+        <image name="bell" catalog="system" width="64" height="62"/>
+        <image name="calendar" catalog="system" width="64" height="52"/>
+        <image name="calendar.badge.plus" catalog="system" width="64" height="50"/>
+        <image name="cloud" catalog="system" width="64" height="42"/>
+        <image name="doc.circle" catalog="system" width="64" height="60"/>
+        <image name="doc.on.doc" catalog="system" width="58" height="64"/>
+        <image name="eye" catalog="system" width="64" height="40"/>
+        <image name="folder" catalog="system" width="64" height="46"/>
+        <image name="forward" catalog="system" width="64" height="38"/>
+        <image name="globe" catalog="system" width="64" height="60"/>
+        <image name="h.square" catalog="system" width="64" height="56"/>
+        <image name="hourglass.bottomhalf.fill" catalog="system" width="54" height="64"/>
+        <image name="line.horizontal.3" catalog="system" width="64" height="32"/>
+        <image name="list.dash" catalog="system" width="64" height="42"/>
+        <image name="lock" catalog="system" width="64" height="64"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="pencil.circle" catalog="system" width="64" height="60"/>
+        <image name="person" catalog="system" width="64" height="58"/>
+        <image name="person.badge.plus" catalog="system" width="64" height="58"/>
+        <image name="printer" catalog="system" width="64" height="54"/>
+        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
+        <image name="text.bubble" catalog="system" width="64" height="54"/>
+        <image name="timer" catalog="system" width="64" height="60"/>
+        <image name="tray.and.arrow.down" catalog="system" width="64" height="54"/>
+        <image name="tray.and.arrow.up" catalog="system" width="64" height="56"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="u4R-IG-HWC"/>
+        <segue reference="dDp-gC-oQT"/>
         <segue reference="xaQ-LV-dut"/>
         <segue reference="633-WJ-zCd"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.26060825589999997" green="0.66840082410000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-    <resources>
-        <image name="archivebox" catalog="system" width="128" height="106"/>
-        <image name="arrow.down" catalog="system" width="120" height="128"/>
-        <image name="arrow.down.circle" catalog="system" width="128" height="121"/>
-        <image name="arrow.up.circle" catalog="system" width="128" height="121"/>
-        <image name="backward" catalog="system" width="128" height="79"/>
-        <image name="bag.badge.plus" catalog="system" width="128" height="122"/>
-        <image name="bell" catalog="system" width="128" height="124"/>
-        <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="calendar.badge.plus" catalog="system" width="128" height="101"/>
-        <image name="cloud" catalog="system" width="128" height="87"/>
-        <image name="doc.circle" catalog="system" width="128" height="121"/>
-        <image name="doc.on.doc" catalog="system" width="117" height="128"/>
-        <image name="eye" catalog="system" width="128" height="81"/>
-        <image name="folder" catalog="system" width="128" height="95"/>
-        <image name="forward" catalog="system" width="128" height="79"/>
-        <image name="globe" catalog="system" width="128" height="121"/>
-        <image name="h.square" catalog="system" width="128" height="114"/>
-        <image name="hourglass.bottomhalf.fill" catalog="system" width="109" height="128"/>
-        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
-        <image name="list.dash" catalog="system" width="128" height="85"/>
-        <image name="lock" catalog="system" width="128" height="128"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="pencil.circle" catalog="system" width="128" height="121"/>
-        <image name="person" catalog="system" width="128" height="117"/>
-        <image name="person.badge.plus" catalog="system" width="128" height="116"/>
-        <image name="printer" catalog="system" width="128" height="111"/>
-        <image name="square.and.pencil" catalog="system" width="128" height="118"/>
-        <image name="text.bubble" catalog="system" width="128" height="110"/>
-        <image name="timer" catalog="system" width="128" height="121"/>
-        <image name="tray.and.arrow.down" catalog="system" width="128" height="109"/>
-        <image name="tray.and.arrow.up" catalog="system" width="128" height="114"/>
-    </resources>
 </document>

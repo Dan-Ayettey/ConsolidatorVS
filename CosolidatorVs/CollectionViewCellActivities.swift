@@ -19,5 +19,5 @@ class CollectionViewCellActivities:UICollectionViewCell{
     @IBOutlet weak var friday: UILabel!
     @IBOutlet weak var saturday: UILabel!
     @IBOutlet weak var sunday: UILabel!
-    @IBOutlet weak var dayOftheWeek: UILabel!
+    
 }
