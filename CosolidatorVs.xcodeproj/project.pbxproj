@@ -21,6 +21,7 @@
 		AFC696F123DD430700152CAB /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC696F023DD430700152CAB /* DesignableTextField.swift */; };
 		AFD0105923F2A61A00F16B0A /* PickADate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD0105823F2A61A00F16B0A /* PickADate.swift */; };
 		AFE905E72405D0E8007F6E43 /* FileMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE905E62405D0E8007F6E43 /* FileMaker.swift */; };
+		AFE905E92409130A007F6E43 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE905E82409130A007F6E43 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		AFC696F023DD430700152CAB /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		AFD0105823F2A61A00F16B0A /* PickADate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickADate.swift; sourceTree = "<group>"; };
 		AFE905E62405D0E8007F6E43 /* FileMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileMaker.swift; sourceTree = "<group>"; };
+		AFE905E82409130A007F6E43 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				AF3BD47723EC4F680039042F /* CollectionCellElements.swift */,
 				AFD0105823F2A61A00F16B0A /* PickADate.swift */,
 				AFE905E62405D0E8007F6E43 /* FileMaker.swift */,
+				AFE905E82409130A007F6E43 /* Model.swift */,
 			);
 			path = CosolidatorVs;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				AF90ADFD23E900B000AE6710 /* ViewController.swift in Sources */,
 				AFC696EF23DD301D00152CAB /* DesignableButton.swift in Sources */,
 				AFC696DA23DBED6F00152CAB /* SceneDelegate.swift in Sources */,
+				AFE905E92409130A007F6E43 /* Model.swift in Sources */,
 				AF3BD47823EC4F680039042F /* CollectionCellElements.swift in Sources */,
 				AF0926982400FF4F00CA0E15 /* ConsolidatorMap.swift in Sources */,
 			);

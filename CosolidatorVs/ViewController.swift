@@ -185,7 +185,7 @@ class ViewController: UIViewController {
                       spieButton.isHidden = true
                       passwordFieldTitle.isHidden = true
                       passwordField.text = " "; passwordButtonTitle.setTitle("Login", for: .normal)
-                      loginButton.setTitle("Send", for: .normal)
+                loginButton.setTitle("Send", for: .normal)
                 
                   loginButton.center.y = loginButton.center.y.advanced(by: -80)
                       self.isAShift=false;

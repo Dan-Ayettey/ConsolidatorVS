@@ -2,6 +2,33 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+	<key>NSFileProviderDomainUsageDescription</key>
+	<string></string>
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string></string>
+	<key>NSDesktopFolderUsageDescription</key>
+	<string></string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string></string>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+		</dict>
+	</array>
+	<key>LSFileQuarantineEnabled</key>
+	<false/>
+	<key>NSExtensionFileProviderSupportsEnumeration</key>
+	<false/>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string></string>
+	</array>
+	<key>NSExtensionFileProviderOnlyVisibleInParentApplication</key>
+	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Locatio required</string>
 	<key>NSLocationAlwaysUsageDescription</key>

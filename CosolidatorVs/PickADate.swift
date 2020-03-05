@@ -10,17 +10,15 @@ import Foundation
 import UIKit
 
 class PickADate:ViewController{
-       @IBOutlet weak var start: UITextField!
+    @IBOutlet weak var startTime: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
-          
-     @IBOutlet weak var scheduleDateLabel: UILabel!
+    @IBOutlet weak var scheduleDateLabel: UILabel!
      @IBOutlet weak var totalTime: UITextField!
      private var  dateFormatter = DateFormatter()
-     @IBOutlet weak var end: UITextField!
+     @IBOutlet weak var endTime: UITextField!
      @IBOutlet weak var GMT: UITextField!
-     
-    private var date = "";
+     private var date = "";
     @IBAction func previous(_ sender: UIButton, forEvent event: UIEvent) {
         dateFormatter.dateFormat = "dd"
         let day = Int(dateFormatter.string(from: datePicker.date))!
@@ -45,35 +43,31 @@ class PickADate:ViewController{
             
         
     }
-    
     @IBAction func Next(_ sender: Any, forEvent event: UIEvent) {
-        
-        dateFormatter.dateFormat = "dd"
-               let day = Int(dateFormatter.string(from: datePicker.date))!
-               
-               dateFormatter.dateFormat = "MM"
-                     var month = Int(dateFormatter.string(from: datePicker.date))!
-               
-               dateFormatter.dateFormat = "yyyy"
-                   let year = Int(dateFormatter.string(from: datePicker.date))!
-                      
-              
-        
-                
-               date = String((day + 1))+"/"+String(month)+"/"+String(year)
-               
-               dateFormatter.dateFormat = "dd/MM/yyyy"
-               guard let formatted = dateFormatter.date(from:  date) else{ month += month+1; return}
-               datePicker.setDate(formatted, animated:true)
-               formatDate(dateFormatter: dateFormatter)
-                      
-    }
+    
+    dateFormatter.dateFormat = "dd"
+            let day = Int(dateFormatter.string(from: datePicker.date))!
+            
+            dateFormatter.dateFormat = "MM"
+    let month = Int(dateFormatter.string(from: datePicker.date))!
+            
+            dateFormatter.dateFormat = "yyyy"
+                let year = Int(dateFormatter.string(from: datePicker.date))!
+                    
+            
+    
+            
+            date = String((day + 1))+"/"+String(month)+"/"+String(year)
+            
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            guard let formatted = dateFormatter.date(from:  date) else{ return}
+            datePicker.setDate(formatted, animated:true)
+            formatDate(dateFormatter: dateFormatter)
+                    
+}
     @IBAction func totalTimeResult(_ sender: UITextField, forEvent event: UIEvent) {
         datePicker.datePickerMode = .dateAndTime;
-       
-      
-         dateFormatter.dateFormat = "HH:mm"
-        
+        /*
         if(dateFormatter.date(from:sender.text!)) != nil{
             sender.boderColor = UIColor.systemGray6
                         sender.cornerRadius = 4
@@ -98,26 +92,25 @@ class PickADate:ViewController{
                     }
     
         
-        
+        */
     
-         
-       
      }
      
      func  formatDate(dateFormatter:DateFormatter){
        
-            dateFormatter.dateFormat = "dd/MM/yyyy"
+           dateFormatter.dateFormat = "HH:MM"
          
          
-        if(start.placeholder! == "MM/DD/YYS"){
+        if(startTime.placeholder! == "H:Ms"){
         stateDate(dateFormatter: dateFormatter)
-            }
-     if(end.placeholder! == "MM/DD/YYE"){
-                   endDate(dateFormatter: dateFormatter)
+            }else
+     if(endTime.placeholder! == "H:Me"){
+        
+        endDate(dateFormatter: dateFormatter)
            
             }
          
-         dateFormatter.dateFormat = "HH:mm"
+         
          time(dateFormatter: dateFormatter)
                
          dateFormatter.dateFormat = "am,pm"
@@ -154,21 +147,96 @@ class PickADate:ViewController{
         
     }
      func stateDate(dateFormatter:DateFormatter){
-       
-          
-               start.text = dateFormatter.string(from: datePicker.date)
+               startTime.text = dateFormatter.string(from: datePicker.date)
           }
      func endDate(dateFormatter:DateFormatter){
-     
-        
-             end.text = dateFormatter.string(from: datePicker.date)
+             endTime.text = dateFormatter.string(from: datePicker.date)
         }
      
           func time(dateFormatter:DateFormatter){
+        
+        
+            /*
            
-             totalTime.text = dateFormatter.string(from: datePicker.date)
+            let end = endTime.text!
+            let start = startTime.text!
+                        
+                  print(end)
+             let startTime = Int(start)
+            let endTime = Int(end)!
+            let total = Int(startTime!+endTime)*/
+            // dateFormatter.dateFormat = "HH";
+            var startHour = Int(startTime.text!.dropLast(3)) ?? 0;
+            let startMinutes = Int(startTime.text!) ?? 0;
+            var endHour = Int(endTime.text!.dropLast(3)) ?? 0;
+            let endMinute = Int(endTime.text!.dropLast(3))
+            var totalHours = 0;
+            var totalMinutes = 0;
+            var remender = 0;
              
+          
+            if(startHour > 12){
+                startHour = startHour - 12
+            }
+            if(endHour > startHour){
+                totalHours = endHour-startHour;
+
+            }else{
+                totalHours = endHour-startHour;
+            }
+           
+            if(endHour != 0 && startHour != 0){
+                dateFormatter.dateFormat = String(totalHours)+":"+String(totalMinutes+remender);
+                
+                totalTime.text = dateFormatter.string(from: datePicker.date);
+            }
+          
+            /*
+            if(GMT.text == "PM" && endHour ?? 0 > 12 ){
+
+                 totalHours = ((endHour ?? 0)-12)%((startHour ?? 0)-12);
+                 totalMinutes = ((endMinute ?? 0)+(startMinutes ?? 0));
+                
+                 
+                 if(totalMinutes > 60){
+                     
+                 totalMinutes = ((endMinute ?? 0) + (startMinutes ?? 0))/60;
+                     remender = ((endMinute ?? 0) + (startMinutes ?? 0))%60
+                     
+                 dateFormatter.dateFormat = String(totalHours)+":"+String(totalMinutes+remender);
+                              }else{
+                 remender = ((endMinute ?? 0) + (startMinutes ?? 0))%60
+                                     
+                    dateFormatter.dateFormat = String(totalHours)+":"+String(totalMinutes+remender);
+                    
+                    totalTime.text = dateFormatter.string(from: datePicker.date);
+                              
+                            
+                 
+                 }
+            }else{
+            
+                totalHours = (endHour ?? 0)%(startHour ?? 0);
+                                         totalMinutes = ((endMinute ?? 0)+(startMinutes ?? 0));
+                                  dateFormatter.dateFormat = String(totalHours)+":"+String(totalMinutes+remender);
+                               
+                               totalTime.text = dateFormatter.string(from: datePicker.date);
+            }
+                */
+            
+            
+                if(totalHours == 0){
              
+                
+                
+                          
+                        
+            }
+            
+      
+           
+      
+            
               }
     
     func GMT(dateFormatter:DateFormatter){
@@ -180,84 +248,48 @@ class PickADate:ViewController{
        if(slice.count == 5){
                   drop = slice.dropLast(3).description
              }
-    
         GMT.text = drop
-             
-             
               }
-     @IBAction func callUpdate(_ sender: UIButton, forEvent event: UIEvent) {
-         
-        
-         
-     }
-     
+   
      func updateViews() {
-         
-       
          datePicker.datePickerMode = .dateAndTime
-         
-          dateFormatter.dateFormat = "dd/MM/yyyy"
+         dateFormatter.dateFormat = "HH:MM"
        labelStateChange(label: scheduleDateLabel, contextText: dateFormatter.string(from: datePicker.date))
      }
       
      @IBAction func schedulerDatePickerValueChanged(_ sender: UIDatePicker) {
-            
-      
-        
-           
-             datePicker.datePickerMode = .dateAndTime
+            datePicker.datePickerMode = .dateAndTime
             dateFormatter.dateFormat = "dd/MM/yyyy"
          labelStateChange(label: scheduleDateLabel, contextText: datePicker.date.description)
              
              
            }
         @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
-         
-   
-          
-        
-          datePicker.datePickerMode = .dateAndTime
-         
-          formatDate(dateFormatter: dateFormatter)
-        
-         
-          
-          
+         datePicker.datePickerMode = .dateAndTime
+         formatDate(dateFormatter: dateFormatter)
         }
      func labelStateChange(label: UILabel, contextText: String) {
-            
          label.text! = contextText
-            
-          
-            
         }
 
      @IBAction func editingBegins(_ sender: UITextField ) {
-      
-      
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-    
         let date = sender.text!;
-  
-       
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "dd/MM/yyyy"
-
-        let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "MMM dd,yyyy"
-
+        let dateFormatterGet = dateFormatter
+        dateFormatterGet.dateFormat = "HH:MM"
+        let dateFormatterPrint = dateFormatter
+        dateFormatterPrint.dateFormat = "HH:MM"
         if dateFormatterGet.date(from: date
 ) != nil {
            
             sender.boderColor = UIColor.systemGray6
             sender.cornerRadius = 4
-            errorMessage.text = " "
+            errorMessage.text = ""
          
         } else {
             
             sender.boderColor = UIColor.red
             sender.layer.borderWidth = 1.0
-            errorMessage.text =  "Date must of this format: 02/29/2016"
+            errorMessage.text =  "Time must of this format: HH:MM"
             errorMessage.textColor = UIColor.red
             errorMessage.font = UIFont.init(descriptor: .init(), size: 14)
         }
@@ -266,18 +298,19 @@ class PickADate:ViewController{
             errorMessage.text = ""
               sender.boderColor = UIColor.systemGray4
                       sender.cornerRadius = 4
-                      errorMessage.text = " "
+                      errorMessage.text = ""
                      
             
         }
+    
                   
      }
     
      @IBAction func endDateStateChange(_ sender: UITextField, forEach event: UIEvent) {
          
-     
-         start.placeholder = "MM/DD/YYSOFF"
-         end.placeholder = "MM/DD/YYE"
+        
+         startTime.placeholder = "H:MsOFF"
+         sender.placeholder = "H:Me"
          
        
          
@@ -318,9 +351,8 @@ class PickADate:ViewController{
      
      @IBAction func startDateStateChange(_ sender: UITextField, forEach event: UIEvent) {
         
-         stateDate(dateFormatter: dateFormatter)
-            start.placeholder = "MM/DD/YYS"
-             end.placeholder = "MM/DD/YYEOFF"
+             sender.placeholder = "H:Ms"
+             endTime.placeholder = "H:MsOFF"
            
        }
 }

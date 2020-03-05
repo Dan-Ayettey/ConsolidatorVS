@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-/*
+
 class CollectionsDataSourceActivitiesLogg: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) ->
@@ -17,10 +17,10 @@ class CollectionsDataSourceActivitiesLogg: UICollectionView, UICollectionViewDat
        UICollectionViewCell {
         
         
-        
+
         
           
-          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "datesoftheweek", for: indexPath) as! CollectionCellElements
+          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "activitiesCell", for: indexPath) as! CollectionCellElements
         
            func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
                
@@ -29,25 +29,26 @@ class CollectionsDataSourceActivitiesLogg: UICollectionView, UICollectionViewDat
                return  data.count
            }
         
-          /*
+          
           cell.cellData.text = data[indexPath.item]
           
          
              
            
              cell.backgroundColor = UIColor.lightText
-              return cell*/
+              return cell
          
          
     
        
          //cell.backgroundColor = UIColor.lightGray
           
-          return cell
+      
           
           
       }
     
+  
 
 
     weak var update: UIButton!;
@@ -58,13 +59,11 @@ class CollectionsDataSourceActivitiesLogg: UICollectionView, UICollectionViewDat
    
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-               /*
+               
         
-        let headerView = collectionView.dequeueReusableCell;
         
-
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "activitiesHeader", for: indexPath) as! CollectionCellElements
         
-        .dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "activitiesCellHead", for: indexPath) as! CollectionCellElements;
         
               headerView.head.text = head[0]
               headerView.head1.text = head[1]
@@ -73,9 +72,8 @@ class CollectionsDataSourceActivitiesLogg: UICollectionView, UICollectionViewDat
               headerView.head4.text = head[4]
       (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.sectionHeadersPinToVisibleBounds = true
         
-        */
-        let v = UICollectionReusableView()
-        return v;
+        
+        return headerView;
 
     }
     
@@ -83,8 +81,9 @@ class CollectionsDataSourceActivitiesLogg: UICollectionView, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         
+        print(head.count)
      
-        return  data.count
+        return  head.count
     }
 
     
@@ -131,7 +130,7 @@ class CollectionsDataSourceActivitiesLogg: UICollectionView, UICollectionViewDat
     }
     
 }
- */
+ 
 class  CollectionsDataSourceActivities: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
            private let sectionInsets = UIEdgeInsets(top: 1.0,
